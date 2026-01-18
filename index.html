@@ -3,58 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isaac Abarca | Desarrollador Software | Machine Learning</title>
-  <meta name="description" content="Portfolio profesional de Isaac Abarca, desarrollador full stack especializado en React, Node.js y Firebase." />
+  <title>Isaac Abarca | Software Developer | Machine Learning</title>
+  <meta name="description" content="Professional portfolio of Isaac Abarca, full stack developer specialized in React, Node.js and Firebase." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Navbar Mejorada -->
-  <header class="header">
-    <nav class="nav">
-      <a href="#home" class="logo">
-        <span class="logo-highlight">I</span>A
-      </a>
-      
-      <div class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="#about"><i class="fas fa-user"></i> Sobre mí</a></li>
-          <li><a href="#skills"><i class="fas fa-code"></i> Habilidades</a></li>
-          <li><a href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
-          <li><a href="#experience"><i class="fas fa-briefcase"></i> Experiencia</a></li>
-          <li><a href="#education"><i class="fas fa-graduation-cap"></i> Estudios</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
-        </ul>
-      </div>
-      
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </header>
+ <!-- Navbar Mejorada -->
+<header class="header">
+  <nav class="nav">
+    <a href="#home" class="logo">
+      <span class="logo-highlight">I</span>A
+    </a>
+    
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#about"><i class="fas fa-user"></i> <span data-translate="Sobre mí">Sobre mí</span></a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> <span data-translate="Habilidades">Habilidades</span></a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> <span data-translate="Proyectos">Proyectos</span></a></li>
+        <li><a href="#experience"><i class="fas fa-briefcase"></i> <span data-translate="Experiencia">Experiencia</span></a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span data-translate="Estudios">Estudios</span></a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-translate="Contacto">Contacto</span></a></li>
+        <!-- AÑADE ESTA LÍNEA PARA EL BOTÓN DE IDIOMA -->
+        <li><a href="#" id="languageToggle" class="language-toggle"><i class="fas fa-language"></i> <span id="languageText">EN</span></a></li>
+      </ul>
+    </div>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+</header>
 
   <!-- Hero Section Rediseñado -->
   <section id="home" class="hero">
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="hero-title">
-          <span class="hero-greeting">Hola, soy</span>
+          <span class="hero-greeting" data-translate="Hola, soy">Hola, soy</span>
           <span class="hero-name">Isaac <span class="text-gradient">Abarca</span></span>
         </h1>
         <h2 class="hero-subtitle">
-          <span class="typing-text">Desarrollador De Software</span>
+          <span class="typing-text" data-translate="Desarrollador De Software">Desarrollador De Software</span>
         </h2>
-        <p class="hero-description">
+        <p class="hero-description" data-translate="Creo experiencias digitales modernas, escalables y enfocadas en resultados. Me especializo en transformar ideas en soluciones tecnológicas efectivas.">
           Creo experiencias digitales modernas, escalables y enfocadas en resultados. 
           Me especializo en transformar ideas en soluciones tecnológicas efectivas.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn-primary">
-            <i class="fas fa-eye"></i> Ver Proyectos
+            <i class="fas fa-eye"></i> <span data-translate="Ver Proyectos">Ver Proyectos</span>
           </a>
           <a href="#contact" class="btn-secondary">
-            <i class="fas fa-paper-plane"></i> Contactar
+            <i class="fas fa-paper-plane"></i> <span data-translate="Contactar">Contactar</span>
           </a>
         </div>
       </div>
@@ -87,19 +90,19 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">01</span>
-        Sobre Mí
+        <span data-translate="Sobre Mí">Sobre Mí</span>
       </h2>
       <div class="about-content">
         <div class="about-text">
-          <p class="about-intro">
-            Desarrollador de  Software con pasión por crear soluciones tecnológicas que marcan la diferencia.
+          <p class="about-intro" data-translate="Desarrollador de Software con pasión por crear soluciones tecnológicas que marcan la diferencia.">
+            Desarrollador de Software con pasión por crear soluciones tecnológicas que marcan la diferencia.
           </p>
-          <p>
+          <p data-translate="Con experiencia en el desarrollo de aplicaciones web modernas utilizando tecnologías como <strong>React</strong>, <strong>Node.js</strong> y <strong>Firebase</strong>. Me enfoco en escribir código limpio, mantenible y escalable, siempre buscando las mejores prácticas y patrones de diseño.">
             Con experiencia en el desarrollo de aplicaciones web modernas utilizando tecnologías como 
             <strong>React</strong>, <strong>Node.js</strong> y <strong>Firebase</strong>. Me enfoco en escribir 
             código limpio, mantenible y escalable, siempre buscando las mejores prácticas y patrones de diseño.
           </p>
-          <p>
+          <p data-translate="Mi objetivo es colaborar en proyectos desafiantes donde pueda aportar valor y seguir creciendo profesionalmente, combinando la innovación técnica con un impacto tangible en los usuarios.">
             Mi objetivo es colaborar en proyectos desafiantes donde pueda aportar valor y seguir creciendo 
             profesionalmente, combinando la innovación técnica con un impacto tangible en los usuarios.
           </p>
@@ -107,15 +110,15 @@
         <div class="about-stats">
           <div class="stat-card">
             <div class="stat-number">10+</div>
-            <div class="stat-label">Proyectos Completados</div>
+            <div class="stat-label" data-translate="Proyectos Completados">Proyectos Completados</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">2+</div>
-            <div class="stat-label">Años de Experiencia</div>
+            <div class="stat-label" data-translate="Años de Experiencia">Años de Experiencia</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">100%</div>
-            <div class="stat-label">Compromiso</div>
+            <div class="stat-label" data-translate="Compromiso">Compromiso</div>
           </div>
         </div>
       </div>
@@ -127,14 +130,14 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">02</span>
-        Habilidades Técnicas
+        <span data-translate="Habilidades Técnicas">Habilidades Técnicas</span>
       </h2>
       
       <div class="skills-grid">
         <div class="skill-category">
           <div class="skill-header">
             <i class="fas fa-desktop skill-icon"></i>
-            <h3>Frontend</h3>
+            <h3 data-translate="Frontend">Frontend</h3>
           </div>
           <ul class="skill-list">
             <li>
@@ -167,7 +170,7 @@
         <div class="skill-category">
           <div class="skill-header">
             <i class="fas fa-server skill-icon"></i>
-            <h3>Backend</h3>
+            <h3 data-translate="Backend">Backend</h3>
           </div>
           <ul class="skill-list">
             <li>
@@ -200,7 +203,7 @@
         <div class="skill-category">
           <div class="skill-header">
             <i class="fas fa-tools skill-icon"></i>
-            <h3>Herramientas</h3>
+            <h3 data-translate="Herramientas">Herramientas</h3>
           </div>
           <ul class="skill-list">
             <li>
@@ -233,7 +236,7 @@
         <div class="skill-category">
           <div class="skill-header">
             <i class="fas fa-tools skill-icon"></i>
-            <h3>IA</h3>
+            <h3 data-translate="IA">IA</h3>
           </div>
           <ul class="skill-list">
             <li>
@@ -271,19 +274,18 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">03</span>
-        Proyectos Destacados
+        <span data-translate="Proyectos Destacados">Proyectos Destacados</span>
       </h2>
 
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-image">
-            <div class="project-tag">Full Stack</div>
-            <div class="image-placeholder"><img src="assets/images/PortadaWebInmobiliaria.png" alt="Plataforma Inmobiliaria">
-            </div>
+            <div class="project-tag" data-translate="Full Stack">Full Stack</div>
+            <div class="image-placeholder"><img src="assets/images/PortadaWebInmobiliaria.png" alt="Plataforma Inmobiliaria"></div>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Plataforma Inmobiliaria</h3>
-            <p class="project-description">
+            <h3 class="project-title" data-translate="Plataforma Inmobiliaria">Plataforma Inmobiliaria</h3>
+            <p class="project-description" data-translate="Pagina Web con CRM integrado, gestión de propiedades y clientes/Agentes. Desarrollada con WordPress personalizado y frontend moderno.<br><br>* Mejore la captacion de clientes en un 30% gracias al SEO que implemente.<br>* Integración de un sistema CRM personalizado para gestionar clientes y propiedades.<br>* Desarrollo de un frontend atractivo y funcional utilizando tecnologías web modernas.<br>* Implementación de formularios de contacto y suscripción con gestión de correo electrónico.<br>* Optimización del rendimiento y la seguridad del sitio web. Mejore la puntuacion SEO de 70 a 98.">
               Pagina Web con CRM integrado, gestión de propiedades y clientes/Agentes. 
               Desarrollada con WordPress personalizado y frontend moderno.<br>
               <br>* Mejore la captacion de clientes en un 30% gracias al SEO que implemente.
@@ -301,12 +303,10 @@
               <span class="tech-tag">CSS</span>
               <span class="tech-tag">Servidor de correo</span>
               <span class="tech-tag">SEO</span>
-              
-
             </div>
             <div class="project-links">
               <a href="https://viventarealestate.es/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Visitar Web
+                <i class="fas fa-external-link-alt"></i> <span data-translate="Visitar Web">Visitar Web</span>
               </a>
             </div>
           </div>
@@ -314,12 +314,12 @@
 
         <article class="project-card">
           <div class="project-image">
-            <div class="project-tag">Procesamiento de Datos</div>
+            <div class="project-tag" data-translate="Procesamiento de Datos">Procesamiento de Datos</div>
             <div class="image-placeholder"><img src="assets/images/proyectoContaminacion.png" alt="Proyecto de Contaminación"></div>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Analisis de Contaminacion</h3>
-            <p class="project-description">
+            <h3 class="project-title" data-translate="Analisis de Contaminacion">Analisis de Contaminacion</h3>
+            <p class="project-description" data-translate="Proyecto de análisis de datos de contaminación ambiental utilizando técnicas de IA generativa.<br><br>* Recopilación y limpieza de grandes conjuntos de datos ambientales.<br>* Análisis exploratorio de datos para identificar patrones y tendencias.<br>* Implementación de modelos de machine learning para predecir niveles futuros de contaminación.<br>* Visualización interactiva de datos para facilitar la interpretación de resultados.">
                 Proyecto de análisis de datos de contaminación ambiental utilizando técnicas de IA generativa.
                 <br>
                 <br>* Recopilación y limpieza de grandes conjuntos de datos ambientales.
@@ -335,10 +335,10 @@
             </div>
             <div class="project-links">
               <a href="https://webgraficascontaminaciongrupo4.streamlit.app/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Demo
+                <i class="fas fa-external-link-alt"></i> <span data-translate="Demo">Demo</span>
               </a>
               <a href="https://github.com/Isaac916/ProyectoContaminaci-n/tree/feature/procesamientoDatos/Proyecto" class="project-link" target="_blank">
-                <i class="fab fa-github"></i> Código
+                <i class="fab fa-github"></i> <span data-translate="Código">Código</span>
               </a>
             </div>
           </div>
@@ -346,12 +346,12 @@
 
         <article class="project-card">
           <div class="project-image">
-            <div class="project-tag">React</div>
+            <div class="project-tag" data-translate="React">React</div>
             <div class="image-placeholder"><img src="assets/images/proyectoGachaTracker.png" alt="Gacha Tracker"></div>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Gacha Tracker</h3>
-            <p class="project-description">
+            <h3 class="project-title" data-translate="Gacha Tracker">Gacha Tracker</h3>
+            <p class="project-description" data-translate="Pagina Web para llevar un control de diferentes ascpectos de unos juegos, con autenticación de usuarios y almacenamiento de datos en Firebase.<br><br>* Permite a los usuarios registrar y monitorear sus tiradas en juegos tipo gacha.<br>* Eventos en tiempo real para actualizaciones instantáneas.<br>* Optimización de llamadas al servidor para mejorar el rendimiento.<br>* Uso de localStorage para mejorar la experiencia del usuario.">
               Pagina Web para llevar un control de diferentes ascpectos de unos juegos,
               con autenticación de usuarios y almacenamiento de datos en Firebase.<br>
               <br>* Permite a los usuarios registrar y monitorear sus tiradas en juegos tipo gacha.
@@ -366,7 +366,7 @@
             </div>
             <div class="project-links">
               <a href="#" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Demo(Próximamente)
+                <i class="fas fa-external-link-alt"></i> <span data-translate="Demo(Próximamente)">Demo(Próximamente)</span>
               </a>
             </div>
           </div>
@@ -380,46 +380,45 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">04</span>
-        Experiencia Profesional
+        <span data-translate="Experiencia Profesional">Experiencia Profesional</span>
       </h2>
 
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">2025 / Actualidad</div>
+          <div class="timeline-date">2025 / <span data-translate="Actualidad">Actualidad</span></div>
           <div class="timeline-content">
-            <h3 class="timeline-title">Desarrollador Software</h3>
-            <span class="timeline-subtitle">Freelance</span>
+            <h3 class="timeline-title" data-translate="Desarrollador Software">Desarrollador Software</h3>
+            <span class="timeline-subtitle" data-translate="Freelance">Freelance</span>
             <ul class="timeline-list">
-              <li>Desarrollo de aplicaciones web modernas con React y Node.js</li>
-              <li>Implementación de APIs REST y sistemas de autenticación</li>
-              <li>Optimización de rendimiento y SEO en proyectos web</li>
+              <li data-translate="Desarrollo de aplicaciones web modernas con React y Node.js">Desarrollo de aplicaciones web modernas con React y Node.js</li>
+              <li data-translate="Implementación de APIs REST y sistemas de autenticación">Implementación de APIs REST y sistemas de autenticación</li>
+              <li data-translate="Optimización de rendimiento y SEO en proyectos web">Optimización de rendimiento y SEO en proyectos web</li>
             </ul>
           </div>
         </div>
-
-         <div class="timeline-item">
-          <div class="timeline-date">2023 Mayo / 2023 Junio</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Creacion de Aplicación de escritorio para un Hotel</h3>
-            <span class="timeline-subtitle">Practicas Grado Superior</span>
-            <ul class="timeline-list">
-              <li>Gestion de bases de datos MySQL</li>
-              <li>Creacion de aplicacion de escritorio con Visual Studio en C#</li>
-              <li>Sistemas de autenticación y seguridad de la aplicación</li>
-            </ul>
-          </div>
-        </div>
-
 
         <div class="timeline-item">
           <div class="timeline-date">2023 Mayo / 2023 Junio</div>
           <div class="timeline-content">
-            <h3 class="timeline-title">Gestion de bases de datos en un ayuntamiento</h3>
-            <span class="timeline-subtitle">Practicas Grado Medio</span>
+            <h3 class="timeline-title" data-translate="Creacion de Aplicación de escritorio para un Hotel">Creacion de Aplicación de escritorio para un Hotel</h3>
+            <span class="timeline-subtitle" data-translate="Practicas Grado Superior">Practicas Grado Superior</span>
             <ul class="timeline-list">
-              <li>Gestion de bases de datos en un ayuntamiento</li>
-              <li>Instalacion de software de productos del ayuntamiento</li>
-              <li>Gestion de redes del ayuntamiento</li>
+              <li data-translate="Gestion de bases de datos MySQL">Gestion de bases de datos MySQL</li>
+              <li data-translate="Creacion de aplicacion de escritorio con Visual Studio en C#">Creacion de aplicacion de escritorio con Visual Studio en C#</li>
+              <li data-translate="Sistemas de autenticación y seguridad de la aplicación">Sistemas de autenticación y seguridad de la aplicación</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2023 Mayo / 2023 Junio</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-translate="Gestion de bases de datos en un ayuntamiento">Gestion de bases de datos en un ayuntamiento</h3>
+            <span class="timeline-subtitle" data-translate="Practicas Grado Medio">Practicas Grado Medio</span>
+            <ul class="timeline-list">
+              <li data-translate="Gestion de bases de datos en un ayuntamiento">Gestion de bases de datos en un ayuntamiento</li>
+              <li data-translate="Instalacion de software de productos del ayuntamiento">Instalacion de software de productos del ayuntamiento</li>
+              <li data-translate="Gestion de redes del ayuntamiento">Gestion de redes del ayuntamiento</li>
             </ul>
           </div>
         </div>
@@ -432,7 +431,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">05</span>
-        Estudios & Certificaciones
+        <span data-translate="Estudios & Certificaciones">Estudios & Certificaciones</span>
       </h2>
 
       <div class="education-grid">
@@ -441,9 +440,9 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="education-content">
-            <h3 class="education-title">Grado medio Desarrollo de Aplicaciones</h3>
-            <span class="education-subtitle">Instituto / 2023</span>
-            <p class="education-description">
+            <h3 class="education-title" data-translate="Grado medio Desarrollo de Aplicaciones">Grado medio Desarrollo de Aplicaciones</h3>
+            <span class="education-subtitle" data-translate="Instituto / 2023">Instituto / 2023</span>
+            <p class="education-description" data-translate="Formación sólida en gestión de redes, bases de datos y desarrollo de aplicaciones.">
               Formación sólida en gestión de redes, bases de datos y desarrollo de aplicaciones.
             </p>
           </div>
@@ -454,9 +453,9 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="education-content">
-            <h3 class="education-title">Grado superior DAM desarrollo de aplicaciones multiplataforma</h3>
-            <span class="education-subtitle">Presencial 2022 / 2024</span>
-            <p class="education-description">
+            <h3 class="education-title" data-translate="Grado superior DAM desarrollo de aplicaciones multiplataforma">Grado superior DAM desarrollo de aplicaciones multiplataforma</h3>
+            <span class="education-subtitle" data-translate="Presencial 2022 / 2024">Presencial 2022 / 2024</span>
+            <p class="education-description" data-translate="Desarrollo de aplicaciones móviles y de escritorio, bases de datos y programación avanzada.">
                 Desarrollo de aplicaciones móviles y de escritorio, bases de datos y programación avanzada.
             </p>
           </div>
@@ -467,9 +466,9 @@
             <i class="fas fa-certificate"></i>
           </div>
           <div class="education-content">
-            <h3 class="education-title">Curso de especializacion de IA y Big Data</h3>
-            <span class="education-subtitle">Curso Especializado 2024 / 2025</span>
-            <p class="education-description">
+            <h3 class="education-title" data-translate="Curso de especializacion de IA y Big Data">Curso de especializacion de IA y Big Data</h3>
+            <span class="education-subtitle" data-translate="Curso Especializado 2024 / 2025">Curso Especializado 2024 / 2025</span>
+            <p class="education-description" data-translate="Formación avanzada en inteligencia artificial, machine learning y análisis de grandes volúmenes de datos.">
                 Formación avanzada en inteligencia artificial, machine learning y análisis de grandes volúmenes de datos.
             </p>
           </div>
@@ -483,12 +482,12 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-number">06</span>
-        Contacto
+        <span data-translate="Contacto">Contacto</span>
       </h2>
       
       <div class="contact-content">
         <div class="contact-info">
-          <p class="contact-intro">
+          <p class="contact-intro" data-translate="¿Interesado en colaborar o tienes un proyecto en mente? Estoy disponible para nuevas oportunidades.">
             ¿Interesado en colaborar o tienes un proyecto en mente? 
             Estoy disponible para nuevas oportunidades.
           </p>
@@ -498,25 +497,25 @@
               <a href="mailto:isaacabarcad@email.com" class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <div>
-                  <span class="contact-label">Email</span>
+                  <span class="contact-label" data-translate="Email">Email</span>
                   <span class="contact-value">isaacabarcad@gmail.com</span>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#" class="contact-item">
+              <a href="https://github.com/Isaac916" class="contact-item" target="_blank">
                 <i class="fab fa-github"></i>
                 <div>
-                  <span class="contact-label">GitHub</span>
-                  <span class="contact-value">github.com/isaac916</span>
+                  <span class="contact-label" data-translate="GitHub">GitHub</span>
+                  <span class="contact-value">github.com/Isaac916</span>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#" class="contact-item">
+              <a href="https://www.linkedin.com/in/isaacabarca" class="contact-item" target="_blank">
                 <i class="fab fa-linkedin"></i>
                 <div>
-                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-label" data-translate="LinkedIn">LinkedIn</span>
                   <span class="contact-value">linkedin.com/in/isaacabarca</span>
                 </div>
               </a>
@@ -525,8 +524,8 @@
               <a href="#" class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                  <span class="contact-label">Ubicación</span>
-                  <span class="contact-value">Disponible para trabajo remoto</span>
+                  <span class="contact-label" data-translate="Ubicación">Ubicación</span>
+                  <span class="contact-value" data-translate="Disponible para trabajo remoto">Disponible para trabajo remoto</span>
                 </div>
               </a>
             </li>
@@ -536,16 +535,16 @@
         <div class="contact-form">
           <form id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Tu nombre" required>
+              <input type="text" data-translate="Tu nombre" placeholder="Tu nombre" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Tu email" required>
+              <input type="email" data-translate="Tu email" placeholder="Tu email" required>
             </div>
             <div class="form-group">
-              <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+              <textarea data-translate="Tu mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn-primary">
-              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+              <i class="fas fa-paper-plane"></i> <span data-translate="Enviar Mensaje">Enviar Mensaje</span>
             </button>
           </form>
         </div>
@@ -560,7 +559,7 @@
         <div class="footer-logo">
           <span class="logo-highlight">I</span>A
         </div>
-        <p class="footer-text">
+        <p class="footer-text" data-translate="Desarrollando el futuro, una línea de código a la vez.">
           Desarrollando el futuro, una línea de código a la vez.
         </p>
         <div class="footer-social">
@@ -571,7 +570,7 @@
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <p class="footer-copyright">
+        <p class="footer-copyright" data-translate="© 2024 Isaac Abarca. Todos los derechos reservados.">
           © 2024 Isaac Abarca. Todos los derechos reservados.
         </p>
       </div>
@@ -579,5 +578,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/language.js"></script>
 </body>
 </html>
