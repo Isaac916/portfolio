@@ -11,8 +11,7 @@
 <body>
 
   <!-- Navbar Mejorada -->
- <!-- Navbar Mejorada -->
-<header class="header">
+ <header class="header">
   <nav class="nav">
     <a href="#home" class="logo">
       <span class="logo-highlight">I</span>A
@@ -26,7 +25,6 @@
         <li><a href="#experience"><i class="fas fa-briefcase"></i> <span data-translate="Experiencia">Experiencia</span></a></li>
         <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span data-translate="Estudios">Estudios</span></a></li>
         <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-translate="Contacto">Contacto</span></a></li>
-        <!-- AÑADE ESTA LÍNEA PARA EL BOTÓN DE IDIOMA -->
         <li><a href="#" id="languageToggle" class="language-toggle"><i class="fas fa-language"></i> <span id="languageText">EN</span></a></li>
       </ul>
     </div>
@@ -109,7 +107,7 @@
         </div>
         <div class="about-stats">
           <div class="stat-card">
-            <div class="stat-number">10+</div>
+            <div class="stat-number">12+</div>
             <div class="stat-label" data-translate="Proyectos Completados">Proyectos Completados</div>
           </div>
           <div class="stat-card">
@@ -278,6 +276,7 @@
       </h2>
 
       <div class="projects-grid">
+        <!-- Proyecto 1: Plataforma Inmobiliaria -->
         <article class="project-card">
           <div class="project-image">
             <div class="project-tag" data-translate="Full Stack">Full Stack</div>
@@ -312,6 +311,7 @@
           </div>
         </article>
 
+        <!-- Proyecto 2: Análisis de Contaminación -->
         <article class="project-card">
           <div class="project-image">
             <div class="project-tag" data-translate="Procesamiento de Datos">Procesamiento de Datos</div>
@@ -344,6 +344,7 @@
           </div>
         </article>
 
+        <!-- Proyecto 3: Web Autoescuela -->
         <article class="project-card">
           <div class="project-image">
             <div class="project-tag" data-translate="Web">Web</div>
@@ -372,6 +373,74 @@
             <div class="project-links">
               <a href="https://autoescuelatellado.es/" class="project-link" target="_blank">
                 <i class="fas fa-external-link-alt"></i> <span data-translate="Visitar">Visitar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: SaaS - Gestor de Proyectos y Tareas (NUEVO) -->
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-tag" data-translate="SaaS">SaaS</div>
+            <div class="image-placeholder"><img src="assets/images/saas-project.png" alt="SaaS Gestor de Proyectos"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-translate="SaaS - Gestor de Proyectos y Tareas">SaaS - Gestor de Proyectos y Tareas</h3>
+            <p class="project-description" data-translate="Plataforma SaaS para gestión de proyectos y tareas con funcionalidades avanzadas de colaboración.<br><br>* Arquitectura multi-tenant con autenticación y roles de usuario (Admin, Manager, Member).<br>* Panel de administración con métricas y análisis de rendimiento de equipos.<br>* Gestión de proyectos con Kanban y vistas de calendario.<br>* Sistema de notificaciones en tiempo real y seguimiento de actividad.">
+              Plataforma SaaS para gestión de proyectos y tareas con funcionalidades avanzadas de colaboración.<br>
+              <br>* Arquitectura multi-tenant con autenticación y roles de usuario (Admin, Manager, Member).
+              <br>* Panel de administración con métricas y análisis de rendimiento de equipos.
+              <br>* Gestión de proyectos con Kanban y vistas de calendario.
+              <br>* Sistema de notificaciones en tiempo real y seguimiento de actividad.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> <span data-translate="Próximamente">Próximamente</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 5: MusicMe - App Flutter con Spotify API (NUEVO) -->
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-tag" data-translate="Móvil">Móvil</div>
+            <div class="image-placeholder"><img src="assets/images/musicme-app.png" alt="MusicMe App"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title" data-translate="MusicMe - App de Música con Spotify API">MusicMe - App de Música con Spotify API</h3>
+            <p class="project-description" data-translate="Aplicación móvil desarrollada con Flutter que integra la API de Spotify para ofrecer una experiencia de música personalizada.<br><br>* Autenticación OAuth 2.0 con Spotify para acceso a cuentas de usuarios.<br>* Búsqueda, reproducción y gestión de playlists con integración de Spotify API.<br>* Geolocalización de conciertos y eventos musicales usando Google Maps API.<br>* Backend en Node.js con PostgreSQL y Supabase para almacenamiento de datos de usuarios.">
+              Aplicación móvil desarrollada con Flutter que integra la API de Spotify para ofrecer una experiencia de música personalizada.<br>
+              <br>* Autenticación OAuth 2.0 con Spotify para acceso a cuentas de usuarios.
+              <br>* Búsqueda, reproducción y gestión de playlists con integración de Spotify API.
+              <br>* Geolocalización de conciertos y eventos musicales usando Google Maps API.
+              <br>* Backend en Node.js con PostgreSQL y Supabase para almacenamiento de datos de usuarios.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">Spotify API</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Google Maps API</span>
+              <span class="tech-tag">OAuth 2.0</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> <span data-translate="Próximamente">Próximamente</span>
+              </a>
+              <a href="#" class="project-link" target="_blank">
+                <i class="fab fa-github"></i> <span data-translate="Código">Código</span>
               </a>
             </div>
           </div>
