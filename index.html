@@ -1,665 +1,769 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isaac Abarca | Software Developer | Machine Learning</title>
-  <meta name="description" content="Professional portfolio of Isaac Abarca, full stack developer specialized in React, Node.js and Firebase." />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Isaac Abarca | Software Developer & ML Engineer</title>
+    <meta name="description" content="Full Stack Developer especializado en React, Node.js, Firebase y Machine Learning. Portfolio profesional con proyectos innovadores.">
+    <meta name="keywords" content="desarrollador software, react, node.js, machine learning, portfolio, full stack, firebase">
+    <link rel="canonical" href="https://isaacabarca.dev/">
+    
+    <!-- Preconexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Isaac Abarca | Software Developer & ML Engineer">
+    <meta property="og:description" content="Full Stack Developer especializado en React, Node.js, Firebase y Machine Learning.">
+    <meta property="og:url" content="https://isaacabarca.dev/">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Isaac Abarca",
+            "jobTitle": "Software Developer & Machine Learning Engineer",
+            "url": "https://isaacabarca.dev/",
+            "sameAs": [
+                "https://github.com/Isaac916",
+                "https://www.linkedin.com/in/isaacabarca"
+            ]
+        }
+    </script>
 </head>
-<body>
+<body class="loading">
 
-  <!-- Navbar Mejorada -->
- <header class="header">
-  <nav class="nav">
-    <a href="#home" class="logo">
-      <span class="logo-highlight">I</span>A
-    </a>
-    
-    <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#about"><i class="fas fa-user"></i> <span data-translate="Sobre mí">Sobre mí</span></a></li>
-        <li><a href="#skills"><i class="fas fa-code"></i> <span data-translate="Habilidades">Habilidades</span></a></li>
-        <li><a href="#projects"><i class="fas fa-project-diagram"></i> <span data-translate="Proyectos">Proyectos</span></a></li>
-        <li><a href="#experience"><i class="fas fa-briefcase"></i> <span data-translate="Experiencia">Experiencia</span></a></li>
-        <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span data-translate="Estudios">Estudios</span></a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-translate="Contacto">Contacto</span></a></li>
-        <li><a href="#" id="languageToggle" class="language-toggle"><i class="fas fa-language"></i> <span id="languageText">EN</span></a></li>
-      </ul>
+    <!-- ===== CURSOR PERSONALIZADO ===== -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <div class="preloader__logo">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="300" stroke-dashoffset="300">
+                        <animate attributeName="stroke-dashoffset" from="300" to="0" dur="1.5s" fill="freeze"/>
+                    </circle>
+                    <text x="50" y="62" text-anchor="middle" fill="#3b82f6" font-family="'Playfair Display', serif" font-size="32" font-weight="700">IA</text>
+                </svg>
+            </div>
+            <div class="preloader__progress">
+                <span class="preloader__bar"></span>
+            </div>
+        </div>
     </div>
-    
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
-</header>
 
-  <!-- Hero Section Rediseñado -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          <span class="hero-greeting" data-translate="Hola, soy">Hola, soy</span>
-          <span class="hero-name">Isaac <span class="text-gradient">Abarca</span></span>
-        </h1>
-        <h2 class="hero-subtitle">
-          <span class="typing-text" data-translate="Desarrollador De Software">Desarrollador De Software</span>
-        </h2>
-        <p class="hero-description" data-translate="Creo experiencias digitales modernas, escalables y enfocadas en resultados. Me especializo en transformar ideas en soluciones tecnológicas efectivas.">
-          Creo experiencias digitales modernas, escalables y enfocadas en resultados. 
-          Me especializo en transformar ideas en soluciones tecnológicas efectivas.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary">
-            <i class="fas fa-eye"></i> <span data-translate="Ver Proyectos">Ver Proyectos</span>
-          </a>
-          <a href="#contact" class="btn-secondary">
-            <i class="fas fa-paper-plane"></i> <span data-translate="Contactar">Contactar</span>
-          </a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="code-snippet">
-          <div class="code-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </div>
-          <pre class="code-content"><code>const developer = {
-  name: "Isaac Abarca",
-  role: "Full Stack Developer",
-  stack: ["React", "Node.js", "Firebase"],
-  passion: "Crear soluciones innovadoras"
-}</code></pre>
-        </div>
-      </div>
-    </div>
-    
-    <div class="scroll-indicator">
-      <a href="#about">
-        <i class="fas fa-chevron-down"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- Sobre Mí Mejorado -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">01</span>
-        <span data-translate="Sobre Mí">Sobre Mí</span>
-      </h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p class="about-intro" data-translate="Desarrollador de Software con pasión por crear soluciones tecnológicas que marcan la diferencia.">
-            Desarrollador de Software con pasión por crear soluciones tecnológicas que marcan la diferencia.
-          </p>
-          <p data-translate="Con experiencia en el desarrollo de aplicaciones web modernas utilizando tecnologías como <strong>React</strong>, <strong>Node.js</strong> y <strong>Firebase</strong>. Me enfoco en escribir código limpio, mantenible y escalable, siempre buscando las mejores prácticas y patrones de diseño.">
-            Con experiencia en el desarrollo de aplicaciones web modernas utilizando tecnologías como 
-            <strong>React</strong>, <strong>Node.js</strong> y <strong>Firebase</strong>. Me enfoco en escribir 
-            código limpio, mantenible y escalable, siempre buscando las mejores prácticas y patrones de diseño.
-          </p>
-          <p data-translate="Mi objetivo es colaborar en proyectos desafiantes donde pueda aportar valor y seguir creciendo profesionalmente, combinando la innovación técnica con un impacto tangible en los usuarios.">
-            Mi objetivo es colaborar en proyectos desafiantes donde pueda aportar valor y seguir creciendo 
-            profesionalmente, combinando la innovación técnica con un impacto tangible en los usuarios.
-          </p>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-number">12+</div>
-            <div class="stat-label" data-translate="Proyectos Completados">Proyectos Completados</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">2+</div>
-            <div class="stat-label" data-translate="Años de Experiencia">Años de Experiencia</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label" data-translate="Compromiso">Compromiso</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Habilidades Mejoradas -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">02</span>
-        <span data-translate="Habilidades Técnicas">Habilidades Técnicas</span>
-      </h2>
-      
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-header">
-            <i class="fas fa-desktop skill-icon"></i>
-            <h3 data-translate="Frontend">Frontend</h3>
-          </div>
-          <ul class="skill-list">
-            <li>
-              <span class="skill-name">HTML5 / CSS3</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 95%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">JavaScript (ES6+)</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">React</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Responsive Design</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 95%"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <i class="fas fa-server skill-icon"></i>
-            <h3 data-translate="Backend">Backend</h3>
-          </div>
-          <ul class="skill-list">
-            <li>
-              <span class="skill-name">Node.js</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Firebase</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">REST APIs</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Express.js</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 55%"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <i class="fas fa-tools skill-icon"></i>
-            <h3 data-translate="Herramientas">Herramientas</h3>
-          </div>
-          <ul class="skill-list">
-            <li>
-              <span class="skill-name">Git & GitHub</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Figma</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Vercel / Netlify</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 50%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Firebase Hosting</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-header">
-            <i class="fas fa-tools skill-icon"></i>
-            <h3 data-translate="IA">IA</h3>
-          </div>
-          <ul class="skill-list">
-            <li>
-              <span class="skill-name">Machine Learning</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Deep Learning</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Big Data</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 65%"></div>
-              </div>
-            </li>
-            <li>
-              <span class="skill-name">Python</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proyectos Mejorados -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">03</span>
-        <span data-translate="Proyectos Destacados">Proyectos Destacados</span>
-      </h2>
-
-      <div class="projects-grid">
-        <!-- Proyecto 1: Plataforma Inmobiliaria -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-tag" data-translate="Full Stack">Full Stack</div>
-            <div class="image-placeholder"><img src="assets/images/PortadaWebInmobiliaria.png" alt="Plataforma Inmobiliaria"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title" data-translate="Plataforma Inmobiliaria">Plataforma Inmobiliaria</h3>
-            <p class="project-description" data-translate="Pagina Web con CRM integrado, gestión de propiedades y clientes/Agentes. Desarrollada con WordPress personalizado y frontend moderno.<br><br>* Mejore la captacion de clientes en un 30% gracias al SEO que implemente.<br>* Integración de un sistema CRM personalizado para gestionar clientes y propiedades.<br>* Desarrollo de un frontend atractivo y funcional utilizando tecnologías web modernas.<br>* Implementación de formularios de contacto y suscripción con gestión de correo electrónico.<br>* Optimización del rendimiento y la seguridad del sitio web. Mejore la puntuacion SEO de 70 a 98.">
-              Pagina Web con CRM integrado, gestión de propiedades y clientes/Agentes. 
-              Desarrollada con WordPress personalizado y frontend moderno.<br>
-              <br>* Mejore la captacion de clientes en un 30% gracias al SEO que implemente.
-              <br>* Integración de un sistema CRM personalizado para gestionar clientes y propiedades.
-              <br>* Desarrollo de un frontend atractivo y funcional utilizando tecnologías web modernas.  
-              <br>* Implementación de formularios de contacto y suscripción con gestión de correo electrónico.
-              <br>* Optimización del rendimiento y la seguridad del sitio web. Mejore la puntuacion SEO de 70 a 98.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">WordPress</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">Servidor de correo</span>
-              <span class="tech-tag">SEO</span>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#hero" class="logo" aria-label="Isaac Abarca - Inicio">
+                <span class="logo__icon">&lt;</span>
+                <span class="logo__text">IA</span>
+                <span class="logo__icon">/&gt;</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link" data-text="Sobre mí">Sobre mí</a></li>
+                    <li><a href="#skills" class="nav__link" data-text="Skills">Skills</a></li>
+                    <li><a href="#projects" class="nav__link" data-text="Proyectos">Proyectos</a></li>
+                    <li><a href="#experience" class="nav__link" data-text="Experiencia">Experiencia</a></li>
+                    <li><a href="#education" class="nav__link" data-text="Estudios">Estudios</a></li>
+                    <li><a href="#contact" class="nav__link" data-text="Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+                    <span class="lang-toggle__text">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
             </div>
-            <div class="project-links">
-              <a href="https://viventarealestate.es/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> <span data-translate="Visitar Web">Visitar Web</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 2: Análisis de Contaminación -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-tag" data-translate="Procesamiento de Datos">Procesamiento de Datos</div>
-            <div class="image-placeholder"><img src="assets/images/proyectoContaminacion.png" alt="Proyecto de Contaminación"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title" data-translate="Analisis de Contaminacion">Analisis de Contaminacion</h3>
-            <p class="project-description" data-translate="Proyecto de análisis de datos de contaminación ambiental utilizando técnicas de IA generativa.<br><br>* Recopilación y limpieza de grandes conjuntos de datos ambientales.<br>* Análisis exploratorio de datos para identificar patrones y tendencias.<br>* Implementación de modelos de machine learning para predecir niveles futuros de contaminación.<br>* Visualización interactiva de datos para facilitar la interpretación de resultados.">
-                Proyecto de análisis de datos de contaminación ambiental utilizando técnicas de IA generativa.
-                <br>
-                <br>* Recopilación y limpieza de grandes conjuntos de datos ambientales.
-                <br>* Análisis exploratorio de datos para identificar patrones y tendencias.
-                <br>* Implementación de modelos de machine learning para predecir niveles futuros de contaminación.
-                <br>* Visualización interactiva de datos para facilitar la interpretación de resultados.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">StreamLit</span>
-              <span class="tech-tag">Machine Learning</span>
-              <span class="tech-tag">Amazon S3</span>
-            </div>
-            <div class="project-links">
-              <a href="https://webgraficascontaminaciongrupo4.streamlit.app/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> <span data-translate="Demo">Demo</span>
-              </a>
-              <a href="https://github.com/Isaac916/ProyectoContaminaci-n/tree/feature/procesamientoDatos/Proyecto" class="project-link" target="_blank">
-                <i class="fab fa-github"></i> <span data-translate="Código">Código</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 3: Web Autoescuela -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-tag" data-translate="Web">Web</div>
-            <div class="image-placeholder"><img src="assets/images/paginatellado.png" alt="Tellado Autoescuelas"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title" data-translate="Web Autoescuela">Web Autoescuela</h3>
-            <p class="project-description" data-translate="Página web para dar a conocer y mejorar el marketing digital de una autoescuela.<br>
-              <br>* Permite a los usuarios ver todos los servicios que se ofrecen en la autoescuela
-              <br>* Optimización en cualquier tipo de dispositivo
-              <br>* Uso de localStorage para mejorar la experiencia del usuario.
-              <br>* Posicionamiento web con SEO profesional y optimizado">
-              Página web para dar a conocer y mejorar el marketing digital de una autoescuela.<br>
-              <br>* Permite a los usuarios ver todos los servicios que se ofrecen en la autoescuela
-              <br>* Optimización en cualquier tipo de dispositivo
-              <br>* Uso de localStorage para mejorar la experiencia del usuario.
-              <br>* Posicionamiento web con SEO profesional y optimizado
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">Vercel</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JS</span>
-              <span class="tech-tag">Servidor SMTP</span>
-            </div>
-            <div class="project-links">
-              <a href="https://autoescuelatellado.es/" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> <span data-translate="Visitar">Visitar</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 4: SaaS - Gestor de Servidores, Servicios y Contenedores Docker (ACTUALIZADO) -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-tag" data-translate="SaaS">SaaS</div>
-            <div class="image-placeholder"><img src="assets/images/saasimage.png" alt="SaaS Gestor de Servidores"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title" data-translate="SaaS - Gestor de Servidores, Servicios y Contenedores Docker">SaaS - Gestor de Servidores, Servicios y Contenedores Docker</h3>
-            <p class="project-description" data-translate="Plataforma SaaS empresarial con arquitectura robusta y escalable. Backend desarrollado con Spring Boot y frontend moderno.<br><br>* Backend con Spring Boot, Java y arquitectura microservicios.<br>* Sistema de mensajería asíncrona con RabbitMQ para eventos y notificaciones.<br>* Pruebas unitarias y de integración con JUnit y Mockito.<br>* Documentación interactiva de API con Swagger/OpenAPI.<br>* Base de datos PostgreSQL con Docker para contenerización.<br>* Frontend moderno con React, TypeScript y Tailwind CSS.">
-              Plataforma SaaS empresarial con arquitectura robusta y escalable. Backend desarrollado con Spring Boot y frontend moderno.<br>
-              <br>* Backend con Spring Boot, Java y arquitectura microservicios.
-              <br>* Sistema de mensajería asíncrona con RabbitMQ para eventos y notificaciones.
-              <br>* Pruebas unitarias y de integración con JUnit y Mockito.
-              <br>* Documentación interactiva de API con Swagger/OpenAPI.
-              <br>* Base de datos PostgreSQL con Docker para contenerización.
-              <br>* Frontend moderno con React, TypeScript y Tailwind CSS.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">RabbitMQ</span>
-              <span class="tech-tag">JUnit</span>
-              <span class="tech-tag">Swagger</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Tailwind CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> <span data-translate="Próximamente">Próximamente</span>
-              </a>
-              <a href="#" class="project-link" target="_blank">
-                <i class="fab fa-github"></i> <span data-translate="Código">Código</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 5: MusicMe - App Flutter con Spotify API -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-tag" data-translate="Móvil">Móvil</div>
-            <div class="image-placeholder"><img src="assets/images/Mapify.png" alt="MusicMe App"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title" data-translate="MusicMe - App de Música con Spotify API">MusicMe - App de Música con Spotify API</h3>
-            <p class="project-description" data-translate="Aplicación móvil desarrollada con Flutter que integra la API de Spotify para ofrecer una experiencia de música personalizada.<br><br>* Autenticación OAuth 2.0 con Spotify para acceso a cuentas de usuarios.<br>* Búsqueda, reproducción y gestión de playlists con integración de Spotify API.<br>* Geolocalización de conciertos y eventos musicales usando Google Maps API.<br>* Backend en Node.js con PostgreSQL y Supabase para almacenamiento de datos de usuarios.">
-              Aplicación móvil desarrollada con Flutter que integra la API de Spotify para ofrecer una experiencia de música personalizada.<br>
-              <br>* Autenticación OAuth 2.0 con Spotify para acceso a cuentas de usuarios.
-              <br>* Búsqueda, reproducción y gestión de playlists con integración de Spotify API.
-              <br>* Geolocalización de conciertos y eventos musicales usando Google Maps API.
-              <br>* Backend en Node.js con PostgreSQL y Supabase para almacenamiento de datos de usuarios.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Dart</span>
-              <span class="tech-tag">Spotify API</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Supabase</span>
-              <span class="tech-tag">Google Maps API</span>
-              <span class="tech-tag">OAuth 2.0</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> <span data-translate="Próximamente">Próximamente</span>
-              </a>
-              <a href="#" class="project-link" target="_blank">
-                <i class="fab fa-github"></i> <span data-translate="Código">Código</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experiencia Mejorada -->
-  <section id="experience" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">04</span>
-        <span data-translate="Experiencia Profesional">Experiencia Profesional</span>
-      </h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2025 / <span data-translate="Actualidad">Actualidad</span></div>
-          <div class="timeline-content">
-            <h3 class="timeline-title" data-translate="Desarrollador Software">Desarrollador Software</h3>
-            <span class="timeline-subtitle" data-translate="Freelance">Freelance</span>
-            <ul class="timeline-list">
-              <li data-translate="Desarrollo de aplicaciones web modernas con React y Node.js">Desarrollo de aplicaciones web modernas con React y Node.js</li>
-              <li data-translate="Implementación de APIs REST y sistemas de autenticación">Implementación de APIs REST y sistemas de autenticación</li>
-              <li data-translate="Optimización de rendimiento y SEO en proyectos web">Optimización de rendimiento y SEO en proyectos web</li>
-            </ul>
-          </div>
         </div>
+    </header>
 
-        <div class="timeline-item">
-          <div class="timeline-date">2023 Mayo / 2023 Junio</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title" data-translate="Creacion de Aplicación de escritorio para un Hotel">Creacion de Aplicación de escritorio para un Hotel</h3>
-            <span class="timeline-subtitle" data-translate="Practicas Grado Superior">Practicas Grado Superior</span>
-            <ul class="timeline-list">
-              <li data-translate="Gestion de bases de datos MySQL">Gestion de bases de datos MySQL</li>
-              <li data-translate="Creacion de aplicacion de escritorio con Visual Studio en C#">Creacion de aplicacion de escritorio con Visual Studio en C#</li>
-              <li data-translate="Sistemas de autenticación y seguridad de la aplicación">Sistemas de autenticación y seguridad de la aplicación</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2023 Mayo / 2023 Junio</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title" data-translate="Gestion de bases de datos en un ayuntamiento">Gestion de bases de datos en un ayuntamiento</h3>
-            <span class="timeline-subtitle" data-translate="Practicas Grado Medio">Practicas Grado Medio</span>
-            <ul class="timeline-list">
-              <li data-translate="Gestion de bases de datos en un ayuntamiento">Gestion de bases de datos en un ayuntamiento</li>
-              <li data-translate="Instalacion de software de productos del ayuntamiento">Instalacion de software de productos del ayuntamiento</li>
-              <li data-translate="Gestion de redes del ayuntamiento">Gestion de redes del ayuntamiento</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Estudios Mejorados -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">05</span>
-        <span data-translate="Estudios & Certificaciones">Estudios & Certificaciones</span>
-      </h2>
-
-      <div class="education-grid">
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h3 class="education-title" data-translate="Grado medio Desarrollo de Aplicaciones">Grado medio Desarrollo de Aplicaciones</h3>
-            <span class="education-subtitle" data-translate="Instituto / 2023">Instituto / 2023</span>
-            <p class="education-description" data-translate="Formación sólida en gestión de redes, bases de datos y desarrollo de aplicaciones.">
-              Formación sólida en gestión de redes, bases de datos y desarrollo de aplicaciones.
-            </p>
-          </div>
-        </div>
-
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h3 class="education-title" data-translate="Grado superior DAM desarrollo de aplicaciones multiplataforma">Grado superior DAM desarrollo de aplicaciones multiplataforma</h3>
-            <span class="education-subtitle" data-translate="Presencial 2022 / 2024">Presencial 2022 / 2024</span>
-            <p class="education-description" data-translate="Desarrollo de aplicaciones móviles y de escritorio, bases de datos y programación avanzada.">
-                Desarrollo de aplicaciones móviles y de escritorio, bases de datos y programación avanzada.
-            </p>
-          </div>
-        </div>
-
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <div class="education-content">
-            <h3 class="education-title" data-translate="Curso de especializacion de IA y Big Data">Curso de especializacion de IA y Big Data</h3>
-            <span class="education-subtitle" data-translate="Curso Especializado 2024 / 2025">Curso Especializado 2024 / 2025</span>
-            <p class="education-description" data-translate="Formación avanzada en inteligencia artificial, machine learning y análisis de grandes volúmenes de datos.">
-                Formación avanzada en inteligencia artificial, machine learning y análisis de grandes volúmenes de datos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto Mejorado -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">06</span>
-        <span data-translate="Contacto">Contacto</span>
-      </h2>
-      
-      <div class="contact-content">
-        <div class="contact-info">
-          <p class="contact-intro" data-translate="¿Interesado en colaborar o tienes un proyecto en mente? Estoy disponible para nuevas oportunidades.">
-            ¿Interesado en colaborar o tienes un proyecto en mente? 
-            Estoy disponible para nuevas oportunidades.
-          </p>
-          
-          <ul class="contact-links">
-            <li>
-              <a href="mailto:isaacabarcad@email.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <span class="contact-label" data-translate="Email">Email</span>
-                  <span class="contact-value">isaacabarcad@gmail.com</span>
+    <!-- ===== MAIN ===== -->
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="hero" class="hero">
+            <div class="hero__bg">
+                <div class="hero__gradient"></div>
+                <div class="hero__grid"></div>
+                <div class="hero__particles" id="particles"></div>
+            </div>
+            
+            <div class="hero__content">
+                <div class="hero__text">
+                    <span class="hero__badge" data-scroll-reveal="fade-up">
+                        <span class="hero__badge-dot"></span>
+                        Disponible para proyectos
+                    </span>
+                    
+                    <h1 class="hero__title" data-scroll-reveal="fade-up" data-scroll-delay="100">
+                        <span class="hero__greeting">Hola, soy</span>
+                        <span class="hero__name">
+                            Isaac <span class="text-gradient">Abarca</span>
+                        </span>
+                    </h1>
+                    
+                    <div class="hero__role" data-scroll-reveal="fade-up" data-scroll-delay="200">
+                        <span class="hero__role-prefix">&gt;</span>
+                        <span class="hero__role-text" id="typing"></span>
+                        <span class="hero__role-cursor">|</span>
+                    </div>
+                    
+                    <p class="hero__description" data-scroll-reveal="fade-up" data-scroll-delay="300">
+                        Transformo ideas complejas en soluciones digitales elegantes. 
+                        Especializado en desarrollo full-stack y machine learning.
+                    </p>
+                    
+                    <div class="hero__actions" data-scroll-reveal="fade-up" data-scroll-delay="400">
+                        <a href="#projects" class="btn btn--primary">
+                            <span>Explorar proyectos</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn--outline">
+                            <span>Contactar</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/Isaac916" class="contact-item" target="_blank">
-                <i class="fab fa-github"></i>
-                <div>
-                  <span class="contact-label" data-translate="GitHub">GitHub</span>
-                  <span class="contact-value">github.com/Isaac916</span>
+                
+                <div class="hero__visual" data-scroll-reveal="fade-left" data-scroll-delay="300">
+                    <div class="hero__card">
+                        <div class="hero__card-header">
+                            <span class="hero__card-dot hero__card-dot--red"></span>
+                            <span class="hero__card-dot hero__card-dot--yellow"></span>
+                            <span class="hero__card-dot hero__card-dot--green"></span>
+                            <span class="hero__card-title">terminal</span>
+                        </div>
+                        <div class="hero__card-body">
+                            <pre class="hero__code"><code><span class="code-comment">// isaac.config.js</span>
+<span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Isaac Abarca"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack Developer"</span>,
+  <span class="code-prop">stack</span>: [
+    <span class="code-string">"React"</span>,
+    <span class="code-string">"Node.js"</span>,
+    <span class="code-string">"Firebase"</span>,
+    <span class="code-string">"Python"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Machine Learning"</span>,
+  <span class="code-prop">available</span>: <span class="code-keyword">true</span>
+};</code></pre>
+                        </div>
+                    </div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/isaacabarca" class="contact-item" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                <div>
-                  <span class="contact-label" data-translate="LinkedIn">LinkedIn</span>
-                  <span class="contact-value">linkedin.com/in/isaacabarca</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <span class="contact-label" data-translate="Ubicación">Ubicación</span>
-                  <span class="contact-value" data-translate="Disponible para trabajo remoto">Disponible para trabajo remoto</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" data-translate="Tu nombre" placeholder="Tu nombre" required>
             </div>
-            <div class="form-group">
-              <input type="email" data-translate="Tu email" placeholder="Tu email" required>
+            
+            <div class="scroll-hint" aria-hidden="true">
+                <span class="scroll-hint__text">Scroll</span>
+                <span class="scroll-hint__line"></span>
             </div>
-            <div class="form-group">
-              <textarea data-translate="Tu mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">
-              <i class="fas fa-paper-plane"></i> <span data-translate="Enviar Mensaje">Enviar Mensaje</span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Footer Mejorado -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <span class="logo-highlight">I</span>A
-        </div>
-        <p class="footer-text" data-translate="Desarrollando el futuro, una línea de código a la vez.">
-          Desarrollando el futuro, una línea de código a la vez.
-        </p>
-        <div class="footer-social">
-          <a href="https://github.com/Isaac916" class="social-link" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/isaacabarca" class="social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <p class="footer-copyright" data-translate="© 2024 Isaac Abarca. Todos los derechos reservados.">
-          © 2024 Isaac Abarca. Todos los derechos reservados.
-        </p>
-      </div>
-    </div>
-  </footer>
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="section">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">01.</span>
+                    <h2 class="section__title">Sobre <span class="text-gradient">Mí</span></h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="about-grid">
+                    <div class="about-text" data-scroll-reveal="fade-right">
+                        <p class="about-text__highlight">
+                            Desarrollador de Software con pasión por crear soluciones tecnológicas que marcan la diferencia.
+                        </p>
+                        <p>
+                            Con experiencia en el desarrollo de aplicaciones web modernas utilizando tecnologías como <strong>React</strong>, <strong>Node.js</strong> y <strong>Firebase</strong>. Me enfoco en escribir código limpio, mantenible y escalable.
+                        </p>
+                        <p>
+                            Mi objetivo es colaborar en proyectos desafiantes donde pueda aportar valor y seguir creciendo profesionalmente, combinando la innovación técnica con un impacto tangible en los usuarios.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats" data-scroll-reveal="fade-left">
+                        <div class="stat-card" data-scroll-reveal="fade-up" data-scroll-delay="100">
+                            <span class="stat-card__number" data-count="12">0</span>
+                            <span class="stat-card__label">Proyectos Completados</span>
+                            <div class="stat-card__icon">🚀</div>
+                        </div>
+                        <div class="stat-card" data-scroll-reveal="fade-up" data-scroll-delay="200">
+                            <span class="stat-card__number" data-count="2">0</span>
+                            <span class="stat-card__label">Años de Experiencia</span>
+                            <div class="stat-card__icon">💡</div>
+                        </div>
+                        <div class="stat-card" data-scroll-reveal="fade-up" data-scroll-delay="300">
+                            <span class="stat-card__number" data-count="100">0</span>
+                            <span class="stat-card__suffix">%</span>
+                            <span class="stat-card__label">Compromiso</span>
+                            <div class="stat-card__icon">🎯</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="section section--alt">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">02.</span>
+                    <h2 class="section__title">Skills <span class="text-gradient">Técnicas</span></h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category" data-scroll-reveal="fade-up" data-scroll-delay="100">
+                        <div class="skill-category__header">
+                            <div class="skill-category__icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-category__list">
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>HTML5 / CSS3</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>JavaScript (ES6+)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>React</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Responsive Design</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="skill-category" data-scroll-reveal="fade-up" data-scroll-delay="200">
+                        <div class="skill-category__header">
+                            <div class="skill-category__icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-category__list">
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Node.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Firebase</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>REST APIs</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Express.js</span>
+                                    <span>55%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="55"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Herramientas -->
+                    <div class="skill-category" data-scroll-reveal="fade-up" data-scroll-delay="300">
+                        <div class="skill-category__header">
+                            <div class="skill-category__icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Herramientas</h3>
+                        </div>
+                        <div class="skill-category__list">
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Git & GitHub</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Figma</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Vercel / Netlify</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="50"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Firebase Hosting</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- IA -->
+                    <div class="skill-category" data-scroll-reveal="fade-up" data-scroll-delay="400">
+                        <div class="skill-category__header">
+                            <div class="skill-category__icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>IA & Data</h3>
+                        </div>
+                        <div class="skill-category__list">
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Machine Learning</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Deep Learning</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Big Data</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__info">
+                                    <span>Python</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar__track">
+                                    <div class="skill-bar__fill" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="section">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">03.</span>
+                    <h2 class="section__title">Proyectos <span class="text-gradient">Destacados</span></h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Proyecto 1: Plataforma Inmobiliaria -->
+                    <article class="project-card" data-scroll-reveal="fade-up">
+                        <div class="project-card__image">
+                            <img src="assets/images/PortadaWebInmobiliaria.png" alt="Plataforma Inmobiliaria" loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__tag">Full Stack</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Plataforma Inmobiliaria</h3>
+                            <p class="project-card__desc">
+                                Web con CRM integrado, gestión de propiedades y clientes. 
+                                WordPress personalizado con frontend moderno y SEO optimizado.
+                            </p>
+                            <div class="project-card__tech">
+                                <span>WordPress</span><span>JavaScript</span><span>PHP</span>
+                                <span>MySQL</span><span>HTML</span><span>CSS</span><span>SEO</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://viventarealestate.es/" target="_blank" rel="noopener" class="project-card__link">
+                                    <i class="fas fa-external-link-alt"></i> Visitar Web
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 2: SaaS -->
+                    <article class="project-card" data-scroll-reveal="fade-up" data-scroll-delay="100">
+                        <div class="project-card__image">
+                            <img src="assets/images/saasimage.png" alt="SaaS Gestor" loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__tag">SaaS</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">SaaS - Gestor de Servidores</h3>
+                            <p class="project-card__desc">
+                                Plataforma empresarial con Spring Boot, microservicios, 
+                                RabbitMQ y frontend en React con TypeScript.
+                            </p>
+                            <div class="project-card__tech">
+                                <span>Spring Boot</span><span>Java</span><span>RabbitMQ</span>
+                                <span>React</span><span>TypeScript</span><span>Docker</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link">
+                                    <i class="fas fa-clock"></i> Próximamente
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 3: Contaminación -->
+                    <article class="project-card" data-scroll-reveal="fade-up" data-scroll-delay="200">
+                        <div class="project-card__image">
+                            <img src="assets/images/proyectoContaminacion.png" alt="Análisis Contaminación" loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__tag">Data Science</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Análisis de Contaminación</h3>
+                            <p class="project-card__desc">
+                                Análisis de datos ambientales con IA generativa, 
+                                machine learning y visualización interactiva.
+                            </p>
+                            <div class="project-card__tech">
+                                <span>Python</span><span>StreamLit</span><span>ML</span><span>AWS S3</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://webgraficascontaminaciongrupo4.streamlit.app/" target="_blank" rel="noopener" class="project-card__link">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                <a href="https://github.com/Isaac916/ProyectoContaminaci-n" target="_blank" rel="noopener" class="project-card__link">
+                                    <i class="fab fa-github"></i> Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 4: MusicMe -->
+                    <article class="project-card" data-scroll-reveal="fade-up" data-scroll-delay="300">
+                        <div class="project-card__image">
+                            <img src="assets/images/Mapify.png" alt="MusicMe App" loading="lazy">
+                            <div class="project-card__overlay">
+                                <span class="project-card__tag">Móvil</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">MusicMe - App de Música</h3>
+                            <p class="project-card__desc">
+                                App Flutter con Spotify API, OAuth 2.0, geolocalización 
+                                de conciertos y backend en Node.js.
+                            </p>
+                            <div class="project-card__tech">
+                                <span>Flutter</span><span>Dart</span><span>Spotify API</span>
+                                <span>Node.js</span><span>Supabase</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link">
+                                    <i class="fas fa-clock"></i> Próximamente
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="section section--alt">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">04.</span>
+                    <h2 class="section__title">Experiencia <span class="text-gradient">Profesional</span></h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="timeline">
+                    <div class="timeline__line"></div>
+                    
+                    <div class="timeline__item" data-scroll-reveal="fade-right">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2025 · Presente</div>
+                        <div class="timeline__content">
+                            <h3>Desarrollador Software</h3>
+                            <span class="timeline__company">Freelance</span>
+                            <ul>
+                                <li>Desarrollo de aplicaciones web modernas con React y Node.js</li>
+                                <li>Implementación de APIs REST y sistemas de autenticación</li>
+                                <li>Optimización de rendimiento y SEO en proyectos web</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item" data-scroll-reveal="fade-left">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2023 · Prácticas</div>
+                        <div class="timeline__content">
+                            <h3>Aplicación de escritorio para Hotel</h3>
+                            <span class="timeline__company">Grado Superior</span>
+                            <ul>
+                                <li>Gestión de bases de datos MySQL</li>
+                                <li>Desarrollo con Visual Studio en C#</li>
+                                <li>Sistemas de autenticación y seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item" data-scroll-reveal="fade-right">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__date">2023 · Prácticas</div>
+                        <div class="timeline__content">
+                            <h3>Gestión de bases de datos</h3>
+                            <span class="timeline__company">Ayuntamiento · Grado Medio</span>
+                            <ul>
+                                <li>Gestión de bases de datos municipales</li>
+                                <li>Instalación de software</li>
+                                <li>Gestión de redes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section id="education" class="section">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">05.</span>
+                    <h2 class="section__title">Estudios & <span class="text-gradient">Certificaciones</span></h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="education-grid">
+                    <div class="education-card" data-scroll-reveal="fade-up" data-scroll-delay="100">
+                        <div class="education-card__icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="education-card__content">
+                            <h3>Especialización en IA y Big Data</h3>
+                            <span class="education-card__date">2024 - 2025</span>
+                            <p>Formación avanzada en inteligencia artificial, machine learning y análisis de grandes volúmenes de datos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card" data-scroll-reveal="fade-up" data-scroll-delay="200">
+                        <div class="education-card__icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-card__content">
+                            <h3>Grado Superior DAM</h3>
+                            <span class="education-card__date">2022 - 2024</span>
+                            <p>Desarrollo de aplicaciones multiplataforma, bases de datos y programación avanzada.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card" data-scroll-reveal="fade-up" data-scroll-delay="300">
+                        <div class="education-card__icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-card__content">
+                            <h3>Grado Medio Desarrollo</h3>
+                            <span class="education-card__date">2023</span>
+                            <p>Formación en gestión de redes, bases de datos y desarrollo de aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section section--alt">
+            <div class="section__container">
+                <header class="section__header" data-scroll-reveal="fade-up">
+                    <span class="section__number">06.</span>
+                    <h2 class="section__title">Contacto</h2>
+                    <div class="section__divider"></div>
+                </header>
+                
+                <div class="contact-grid">
+                    <div class="contact-info" data-scroll-reveal="fade-right">
+                        <p class="contact-info__intro">
+                            ¿Interesado en colaborar o tienes un proyecto en mente? 
+                            Estoy disponible para nuevas oportunidades.
+                        </p>
+                        
+                        <div class="contact-info__links">
+                            <a href="mailto:isaacabarcad@gmail.com" class="contact-link">
+                                <div class="contact-link__icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-link__info">
+                                    <span class="contact-link__label">Email</span>
+                                    <span class="contact-link__value">isaacabarcad@gmail.com</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/Isaac916" target="_blank" rel="noopener" class="contact-link">
+                                <div class="contact-link__icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-link__info">
+                                    <span class="contact-link__label">GitHub</span>
+                                    <span class="contact-link__value">github.com/Isaac916</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/in/isaacabarca" target="_blank" rel="noopener" class="contact-link">
+                                <div class="contact-link__icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-link__info">
+                                    <span class="contact-link__label">LinkedIn</span>
+                                    <span class="contact-link__value">linkedin.com/in/isaacabarca</span>
+                                </div>
+                            </a>
+                            
+                            <div class="contact-link">
+                                <div class="contact-link__icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-link__info">
+                                    <span class="contact-link__label">Ubicación</span>
+                                    <span class="contact-link__value">Disponible para trabajo remoto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" data-scroll-reveal="fade-left" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" class="form-input" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="logo__icon">&lt;</span>
+                <span class="logo__text">IA</span>
+                <span class="logo__icon">/&gt;</span>
+            </div>
+            <p class="footer__tagline">Desarrollando el futuro, una línea de código a la vez.</p>
+            <div class="footer__social">
+                <a href="https://github.com/Isaac916" target="_blank" rel="noopener" class="footer__social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/isaacabarca" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:isaacabarcad@gmail.com" class="footer__social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer__copy">&copy; 2024 Isaac Abarca. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js" defer></script>
+    <script src="js/language.js" defer></script>
 </body>
 </html>
