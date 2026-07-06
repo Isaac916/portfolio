@@ -789,3 +789,26 @@ textarea.form-input { resize: vertical; min-height: 120px; }
         max-width: none;
     }
 }
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    z-index: 9999;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    max-width: 400px;
+}
+.toast--show { transform: translateX(0); }
+.toast--success { background: #065f46; color: #d1fae5; }
+.toast--error { background: #7f1d1d; color: #fee2e2; }
+
+@media (max-width: 480px) {
+    .toast { left: 1rem; right: 1rem; bottom: 1rem; max-width: none; }
+}
