@@ -1,140 +1,130 @@
 /**
  * =========================================
- * EMAILJS - VERCEL + LOCAL (CORREGIDO)
+ * EMAILJS - VERSIÓN DEPURACIÓN
  * =========================================
  */
 
 (async function() {
     'use strict';
 
-    // =============================================
-    // CARGAR CONFIGURACIÓN
-    // =============================================
-    
-    function getConfig() {
-        if (window.ENV && window.ENV.EMAILJS_PUBLIC_KEY) {
-            console.log('☁️  Usando variables de Vercel');
-            return window.ENV;
-        }
-        
-        if (typeof CONFIG !== 'undefined' && CONFIG.EMAILJS_PUBLIC_KEY && CONFIG.EMAILJS_PUBLIC_KEY !== 'TU_PUBLIC_KEY_REAL_AQUI') {
-            console.log('🏠 Usando config.js local');
-            return CONFIG;
-        }
-        
-        console.error('❌ No se encontró configuración');
-        return null;
+    console.log('🔍 INICIANDO DEPURACIÓN DE EMAILJS');
+    console.log('─────────────────────────────────');
+
+    // 1. Verificar window.ENV (Vercel)
+    console.log('1️⃣  Verificando window.ENV:', window.ENV ? 'EXISTE ✅' : 'NO EXISTE ❌');
+    if (window.ENV) {
+        console.log('   PUBLIC_KEY:', window.ENV.EMAILJS_PUBLIC_KEY ? window.ENV.EMAILJS_PUBLIC_KEY.substring(0, 10) + '...' : 'VACÍO ❌');
+        console.log('   SERVICE_ID:', window.ENV.EMAILJS_SERVICE_ID ? window.ENV.EMAILJS_SERVICE_ID : 'VACÍO ❌');
+        console.log('   TEMPLATE_ID:', window.ENV.EMAILJS_TEMPLATE_ID ? window.ENV.EMAILJS_TEMPLATE_ID : 'VACÍO ❌');
     }
-    
-    const config = getConfig();
-    
-    if (!config || !config.EMAILJS_PUBLIC_KEY) {
-        console.error('❌ EmailJS no configurado');
+
+    // 2. Verificar CONFIG (Local)
+    console.log('2️⃣  Verificando CONFIG:', typeof CONFIG !== 'undefined' ? 'EXISTE ✅' : 'NO EXISTE ❌');
+    if (typeof CONFIG !== 'undefined') {
+        console.log('   PUBLIC_KEY:', CONFIG.EMAILJS_PUBLIC_KEY ? CONFIG.EMAILJS_PUBLIC_KEY.substring(0, 10) + '...' : 'VACÍO ❌');
+    }
+
+    // 3. Verificar EmailJS cargado
+    console.log('3️⃣  Verificando emailjs:', typeof emailjs !== 'undefined' ? 'CARGADO ✅' : 'NO CARGADO ❌');
+
+    // 4. Obtener configuración final
+    let config = null;
+    if (window.ENV && window.ENV.EMAILJS_PUBLIC_KEY) {
+        config = window.ENV;
+        console.log('4️⃣  Usando: VERCEL');
+    } else if (typeof CONFIG !== 'undefined' && CONFIG.EMAILJS_PUBLIC_KEY && CONFIG.EMAILJS_PUBLIC_KEY.length > 10) {
+        config = CONFIG;
+        console.log('4️⃣  Usando: LOCAL');
+    } else {
+        console.log('4️⃣  ERROR: Sin configuración válida');
+    }
+
+    if (!config || typeof emailjs === 'undefined') {
+        console.error('❌ No se puede continuar');
         return;
     }
-    
-    if (typeof emailjs === 'undefined') {
-        console.error('❌ EmailJS no cargado');
-        return;
-    }
-    
+
+    // 5. Inicializar
     emailjs.init(config.EMAILJS_PUBLIC_KEY);
-    console.log('✅ EmailJS listo');
-    
-    const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } = config;
-    
-    // =============================================
-    // FORMULARIO
-    // =============================================
-    
+    console.log('5️⃣  EmailJS inicializado');
+
+    // 6. Verificar formulario
     const form = document.getElementById('contactForm');
+    console.log('6️⃣  Formulario:', form ? 'ENCONTRADO ✅' : 'NO ENCONTRADO ❌');
+
     if (!form) return;
-    
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    
-    if (!submitBtn) return;
-    
-    function validate(name, email, message) {
-        const errors = [];
-        if (!name || name.trim().length < 2) errors.push('Nombre (mín. 2 caracteres)');
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errors.push('Email válido');
-        if (!message || message.trim().length < 10) errors.push('Mensaje (mín. 10 caracteres)');
-        return errors;
-    }
-    
-    function toast(message, type = 'success') {
-        const old = document.querySelector('.toast');
-        if (old) old.remove();
-        
-        const t = document.createElement('div');
-        t.className = `toast toast--${type}`;
-        t.innerHTML = `<span>${type === 'success' ? '✅' : '❌'}</span> ${message}`;
-        document.body.appendChild(t);
-        
-        requestAnimationFrame(() => t.classList.add('toast--show'));
-        setTimeout(() => {
-            t.classList.remove('toast--show');
-            setTimeout(() => t.remove(), 300);
-        }, 5000);
-    }
-    
-    // =============================================
-    // ENVIAR (CORREGIDO - CON to_email)
-    // =============================================
+
+    // 7. Configurar envío
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const name = nameInput?.value.trim() || '';
-        const email = emailInput?.value.trim() || '';
-        const message = messageInput?.value.trim() || '';
-        
-        const errors = validate(name, email, message);
-        if (errors.length > 0) {
-            toast(errors.join(' · '), 'error');
-            return;
+
+        const name = document.getElementById('name')?.value || 'Test';
+        const email = document.getElementById('email')?.value || 'test@test.com';
+        const message = document.getElementById('message')?.value || 'Mensaje de prueba';
+
+        console.log('─────────────────────────────────');
+        console.log('📧 ENVIANDO EMAIL DE PRUEBA');
+        console.log('   Service ID:', config.EMAILJS_SERVICE_ID);
+        console.log('   Template ID:', config.EMAILJS_TEMPLATE_ID);
+        console.log('   Datos:', { name, email, message });
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.innerHTML = 'Enviando...';
+            submitBtn.disabled = true;
         }
-        
-        const origHTML = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>Enviando...</span><i class="fas fa-spinner fa-spin"></i>';
-        submitBtn.disabled = true;
-        
+
         try {
-            // ⚠️ CORREGIDO: Añadido to_email
-            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-                to_email: 'isaacabarcad@gmail.com',    // ← AÑADIDO
-                from_name: name,
-                reply_to: email,
-                message: message,
-                to_name: 'Isaac',
-                time: new Date().toLocaleString('es-ES', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                })
-            });
-            
-            submitBtn.innerHTML = '<span>¡Enviado!</span><i class="fas fa-check"></i>';
-            submitBtn.style.background = '#22c55e';
-            form.reset();
-            toast('¡Gracias! Te responderé pronto 🚀', 'success');
-            
-        } catch (err) {
-            console.error('Error EmailJS:', err);
-            submitBtn.innerHTML = '<span>Error</span><i class="fas fa-times"></i>';
-            submitBtn.style.background = '#ef4444';
-            toast('Error. Intenta de nuevo o escríbeme directamente.', 'error');
+            const result = await emailjs.send(
+                config.EMAILJS_SERVICE_ID,
+                config.EMAILJS_TEMPLATE_ID,
+                {
+                    to_email: 'isaacabarcad@gmail.com',
+                    from_name: name,
+                    reply_to: email,
+                    message: message,
+                    to_name: 'Isaac'
+                }
+            );
+
+            console.log('✅ RESPUESTA DE EMAILJS:');
+            console.log('   Status:', result.status);
+            console.log('   Text:', result.text);
+            console.log('─────────────────────────────────');
+
+            alert('✅ Email enviado! Status: ' + result.status + '\nRevisa tu bandeja de entrada Y SPAM');
+
+            if (submitBtn) {
+                submitBtn.innerHTML = '¡Enviado! ✅';
+                submitBtn.style.background = '#22c55e';
+            }
+
+        } catch (error) {
+            console.error('❌ ERROR COMPLETO:');
+            console.error('   Status:', error.status);
+            console.error('   Text:', error.text);
+            console.error('   Message:', error.message);
+            console.error('   Stack:', error.stack);
+            console.log('─────────────────────────────────');
+
+            alert('❌ Error: ' + (error.text || error.message));
+
+            if (submitBtn) {
+                submitBtn.innerHTML = 'Error ❌';
+                submitBtn.style.background = '#ef4444';
+            }
         }
-        
+
         setTimeout(() => {
-            submitBtn.innerHTML = origHTML;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-        }, 3000);
+            if (submitBtn) {
+                submitBtn.innerHTML = 'Enviar Mensaje';
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }
+        }, 5000);
     });
-    
+
+    console.log('✅ Formulario listo para pruebas');
+    console.log('─────────────────────────────────');
+
 })();
