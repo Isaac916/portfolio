@@ -793,10 +793,23 @@
         </div>
     </footer>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script src="js/main.js" defer></script>
-    <script src="js/language.js" defer></script>
-    <!-- EmailJS -->
+     <!-- 1. Configuración de Vercel (generada automáticamente en deploy) -->
+    <script src="js/env.js"></script>
+    
+    <!-- 2. Configuración local (solo desarrollo, NO se sube a Git) -->
+    <script src="js/config.js"></script>
+    
+    <!-- 3. EmailJS CDN (librería externa) -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- 4. EmailJS handler (usa las configuraciones anteriores) -->
+    <script src="js/email.js"></script>
+    
+    <!-- 5. Script principal -->
+    <script src="js/main.js"></script>
+    
+    <!-- 6. Traducciones -->
+    <script src="js/language.js"></script>
+
 </body>
 </html>
