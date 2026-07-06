@@ -1,6 +1,6 @@
 /**
  * =========================================
- * EMAILJS - VERCEL + LOCAL
+ * EMAILJS - VERCEL + LOCAL (CORREGIDO)
  * =========================================
  */
 
@@ -12,19 +12,16 @@
     // =============================================
     
     function getConfig() {
-        // 1. Vercel: variables inyectadas en window.ENV
         if (window.ENV && window.ENV.EMAILJS_PUBLIC_KEY) {
             console.log('☁️  Usando variables de Vercel');
             return window.ENV;
         }
         
-        // 2. Local: variable global CONFIG de config.js
         if (typeof CONFIG !== 'undefined' && CONFIG.EMAILJS_PUBLIC_KEY && CONFIG.EMAILJS_PUBLIC_KEY !== 'TU_PUBLIC_KEY_REAL_AQUI') {
             console.log('🏠 Usando config.js local');
             return CONFIG;
         }
         
-        // 3. Error
         console.error('❌ No se encontró configuración');
         return null;
     }
@@ -33,8 +30,6 @@
     
     if (!config || !config.EMAILJS_PUBLIC_KEY) {
         console.error('❌ EmailJS no configurado');
-        console.error('   Vercel: Añade variables en Settings → Environment Variables');
-        console.error('   Local:  Crea js/config.js desde js/config.example.js');
         return;
     }
     
@@ -43,7 +38,6 @@
         return;
     }
     
-    // Inicializar
     emailjs.init(config.EMAILJS_PUBLIC_KEY);
     console.log('✅ EmailJS listo');
     
@@ -63,7 +57,6 @@
     
     if (!submitBtn) return;
     
-    // Validar
     function validate(name, email, message) {
         const errors = [];
         if (!name || name.trim().length < 2) errors.push('Nombre (mín. 2 caracteres)');
@@ -72,7 +65,6 @@
         return errors;
     }
     
-    // Toast
     function toast(message, type = 'success') {
         const old = document.querySelector('.toast');
         if (old) old.remove();
@@ -89,7 +81,9 @@
         }, 5000);
     }
     
-    // Enviar
+    // =============================================
+    // ENVIAR (CORREGIDO - CON to_email)
+    // =============================================
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -108,11 +102,20 @@
         submitBtn.disabled = true;
         
         try {
+            // ⚠️ CORREGIDO: Añadido to_email
             await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                to_email: 'isaacabarcad@gmail.com',    // ← AÑADIDO
                 from_name: name,
                 reply_to: email,
                 message: message,
-                to_name: 'Isaac'
+                to_name: 'Isaac',
+                time: new Date().toLocaleString('es-ES', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
             });
             
             submitBtn.innerHTML = '<span>¡Enviado!</span><i class="fas fa-check"></i>';
@@ -121,7 +124,7 @@
             toast('¡Gracias! Te responderé pronto 🚀', 'success');
             
         } catch (err) {
-            console.error(err);
+            console.error('Error EmailJS:', err);
             submitBtn.innerHTML = '<span>Error</span><i class="fas fa-times"></i>';
             submitBtn.style.background = '#ef4444';
             toast('Error. Intenta de nuevo o escríbeme directamente.', 'error');
